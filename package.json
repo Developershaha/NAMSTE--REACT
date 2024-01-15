@@ -2,7 +2,6 @@
   "name": "episode-02",
   "version": "1.0.0",
   "description": "this is namaste react by skahay saini",
-  "main": "index.js",
   "scripts": {
     "test": "jest"
   },
@@ -19,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/Developershaha/NAMSTE--REACT/issues"
   },
-  "homepage": "https://github.com/Developershaha/NAMSTE--REACT#readme"
+  "homepage": "https://github.com/Developershaha/NAMSTE--REACT#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
