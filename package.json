@@ -1,0 +1,23 @@
+{
+  "name": "episode-02",
+  "version": "1.0.0",
+  "description": "this is namaste react by skahay saini",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Developershaha/NAMSTE--REACT.git"
+  },
+  "keywords": [
+    "react",
+    "js"
+  ],
+  "author": "shahaji kokane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Developershaha/NAMSTE--REACT/issues"
+  },
+  "homepage": "https://github.com/Developershaha/NAMSTE--REACT#readme"
+}
