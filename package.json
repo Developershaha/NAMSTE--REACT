@@ -1,7 +1,7 @@
 {
   "name": "episode-02",
   "version": "1.0.0",
-  "description": "this is namaste react by skahay saini",
+  "description": "this is namaste react by shahaji kokane",
   "scripts": {
     "start":"parcel index.html",
     "build":"parcel build index.html",
