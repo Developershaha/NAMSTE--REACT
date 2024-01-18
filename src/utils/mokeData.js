@@ -1,64 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Heading = () => <h1>heading comes </h1>;
-
-/**
- * Header
- *  - logo
- *  - nav-items
- *
- * Body
- *  - search
- *  - restaurantContainer - image , name of the restaurant and rating etc
- *  - restaurantCard
- * Footer
- *  - copyright
- *  - links
- *  - address
- *  - contact
- */
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
-        />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-const RestaurantCard = (props) => {
-  const { resData } = props;
-  return (
-    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
-      <img
-        className="res-logo"
-        alt="res-logo"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/" +
-          resData?.info?.cloudinaryImageId
-        }
-      />
-      <h3>{resData?.info?.name}</h3>
-      <h4>{resData?.info?.cuisines.join(", ")}</h4>
-      <h4>{resData?.info?.avgRating} Rating</h4>
-      <h4>{resData?.info?.sla?.deliveryTime} minutes</h4>
-      <h4>{resData?.info?.costForTwo}</h4>
-    </div>
-  );
-};
-
 const resObj = [
   {
     info: {
@@ -1380,26 +1319,5 @@ const resObj = [
     },
   },
 ];
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="Search">Search</div>
-      <div className="res-container">
-        {resObj.map((restaurant) => (
-          <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
-        ))}
-      </div>
-    </div>
-  );
-};
 
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default resObj;
