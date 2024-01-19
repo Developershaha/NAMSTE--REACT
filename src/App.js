@@ -5,22 +5,6 @@ import Body from "./components/Body.js";
 
 const Heading = () => <h1>heading comes </h1>;
 
-/**
- * Header
- *  - logo
- *  - nav-items
- *
- * Body
- *  - search
- *  - restaurantContainer - image , name of the restaurant and rating etc
- *  - restaurantCard
- * Footer
- *  - copyright
- *  - links
- *  - address
- *  - contact
- */
-
 const AppLayout = () => {
   return (
     <div className="app">
