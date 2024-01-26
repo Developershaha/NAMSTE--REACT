@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"; // this is named import and
 import React from "react"; // this is default import ok
 import Shimmer from "./Shimmer";
 import { URL_DATA } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
@@ -13,12 +14,12 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
+    // const data = await fetch();
     const data = await fetch(URL_DATA);
     const json = await data.json();
     // use optional chaining
-
     const jsonData =
-      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
     setListOfRestaurant(jsonData);
     setFilterData(jsonData);
@@ -55,10 +56,10 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            const newList = listOfRestaurant.filter((res) => {
-              return res?.info?.avgRating > 4;
-            });
-            setListOfRestaurant(newList);
+            // const newList = listOfRestaurant.filter((res) => {
+            //   return res?.info?.avgRating > 4;
+            // });
+            // setListOfRestaurant(newList);
           }}
         >
           Top Rated Restaurant above 4 star
@@ -66,7 +67,12 @@ const Body = () => {
       </div>
       <div className="res-container">
         {listOfRestaurant?.map((restaurant) => (
-          <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+          <Link
+            key={restaurant?.info?.id}
+            to={"./restaurants/" + restaurant?.info?.id}
+          >
+            <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
